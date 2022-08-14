@@ -5,7 +5,7 @@
     <h2 class="mb-0"><span class="text-primary">{{ .Title }}</span></h2>
     {{ .Content }}
     {{ with .Params.link }}<p>Project link: <a href="{{ . }}">{{ . }}</a></p>{{ end }}
-    {{ partial "techtags" . }}
+    {{ partial "techtags" .Params.tags }}
   </div>
 </section>
 {{ end }}

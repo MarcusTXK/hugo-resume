@@ -6,7 +6,7 @@
     </div>
   
     {{ $featuredPages := where .Pages "Params.featured" true }}
-    {{ range $featuredPages }}
+    {{ range sort $featuredPages "Params.date" "desc" }}
       {{ partial (printf "%s%s" .Section "Summary") . }}
     {{ end }}
   </div>
