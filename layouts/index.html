@@ -15,11 +15,11 @@
          {{ partial "sectionSummary" . }}
       {{ end }}
    {{ end }}
-   {{ if .Site.Params.showPublications }}
-      {{ with .Site.GetPage "section" "publications" }}
-         {{ .Scratch.Set "sectionId" (default "Publications" .Site.Params.publicationsAlternateName) }}
-         {{ partial "sectionSummary" . }}
-      {{ end }}
+   {{ if .Site.Params.showAwards }}
+      {{ with .Site.GetPage "section" "awards" }}
+      {{ .Scratch.Set "sectionId" "awards" }}
+      {{ partial "sectionSummary" . }}
+   {{ end }}
    {{ end }}
    {{ if .Site.Params.showExperience }}
        {{ partial "portfolio/experience.html" . }}
