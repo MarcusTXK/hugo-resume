@@ -4,7 +4,7 @@
   <div class="my-auto">
     <h2 class="mb-0"><span class="text-primary">{{ .Title }}</span></h2>
     {{ with .Params.desciptionImage }}
-      <img src="{{ . }}" style="max-width:800px;max-height:800px;padding:5px;" >
+      <img src="{{ . }}" style="max-width:800px;width:80%;max-height:800px;padding:5px;" >
     {{ end }}
     {{ .Content | safeHTML}}
     {{ with .Params.link }}<p>Project link: <a href="{{ . }}">{{ . }}</a></p>{{ end }}
