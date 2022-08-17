@@ -8,7 +8,7 @@
             {{ range .skills }}            
                 {{ if and (isset . "name") (isset . "icon") }}
                     <li class="list-inline-item">
-                      <i class="devicon-{{ .icon }}"></i>
+                      <i class="px-1 devicon-{{ .icon }}"></i>
                       {{if isset . "link"}}
                           <a href="{{.link}}">{{ .name }}</a>
                       {{ else }}
